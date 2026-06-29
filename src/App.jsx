@@ -9,8 +9,10 @@ import Process from "./sections/Process";
 import DiamondCTA from "./sections/DiamondCTA";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import WelcomeIntro from "./components/WelcomeIntro";
 
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window === "undefined") return false;
     return window.localStorage.getItem("heera-theme") === "dark";
@@ -21,8 +23,18 @@ function App() {
     window.localStorage.setItem("heera-theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
+  useEffect(() => {
+    document.body.classList.toggle("intro-lock", showIntro);
+    return () => document.body.classList.remove("intro-lock");
+  }, [showIntro]);
+
   return (
     <div className="app-shell min-h-screen overflow-x-hidden bg-ivory text-ink">
+      <WelcomeIntro
+        darkMode={darkMode}
+        show={showIntro}
+        onComplete={() => setShowIntro(false)}
+      />
       <Header
         darkMode={darkMode}
         onToggleTheme={() => setDarkMode((value) => !value)}

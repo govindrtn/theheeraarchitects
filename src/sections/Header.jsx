@@ -56,9 +56,9 @@ function Header({ darkMode, onToggleTheme }) {
           scrolled ? "is-scrolled" : ""
         }`}
       >
-        <div className="container-shell flex h-20 items-center justify-between md:h-28">
+        <div className="container-shell flex h-[5.25rem] items-center justify-between md:h-28">
           <div
-            className={`desktop-header-shell flex w-full items-center justify-between md:rounded-[1.15rem] md:border md:px-3 md:py-2.5 ${
+            className={`desktop-header-shell mobile-header-shell flex w-full items-center justify-between rounded-[1.15rem] border px-3 py-2.5 ${
               scrolled ? "is-scrolled" : ""
             }`}
           >
@@ -69,7 +69,7 @@ function Header({ darkMode, onToggleTheme }) {
             >
               <BrandDiamond
                 light={darkMode}
-                className="h-14 w-[5.5rem] md:h-16 md:w-24"
+                className="h-11 w-[4.5rem] md:h-16 md:w-24"
               />
               <span className="hidden border-l border-black/10 pl-3 xl:block">
                 <strong className="block font-display text-[0.95rem] font-normal leading-none text-ink">
