@@ -3,7 +3,7 @@ import BrandDiamond from "./BrandDiamond";
 function Logo({ light = false, markOnly = false, className = "" }) {
   return (
     <a
-      href="#home"
+      href="/"
       className={`inline-flex items-center ${className}`}
       aria-label="The Heera Architects home"
     >

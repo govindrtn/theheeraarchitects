@@ -20,7 +20,7 @@ function Projects() {
           />
           <Reveal delay={0.12}>
             <a
-              href="#contact"
+              href="/contact"
               className="group inline-flex items-center gap-3 border-b border-white/30 pb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white"
             >
               Discuss your project
@@ -53,7 +53,7 @@ function Projects() {
                   0{index + 1}
                 </span>
                 <a
-                  href="#contact"
+                  href="/contact"
                   aria-label={`View details for ${project.title}`}
                   className="absolute bottom-5 right-5 grid size-12 translate-y-3 place-items-center bg-paper text-ink opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
                 >

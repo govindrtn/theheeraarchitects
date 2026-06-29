@@ -51,7 +51,7 @@ function Footer() {
         <div className="grid gap-12 border-b border-white/10 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_1fr_1fr] lg:py-20">
           <div>
             <a
-              href="#home"
+              href="/"
               aria-label="The Heera Architects home"
               className="footer-brand inline-flex items-center gap-4 border border-white/10 px-4 py-3"
             >
@@ -125,7 +125,7 @@ function Footer() {
               {services.slice(0, 5).map((service) => (
                 <a
                   key={service.title}
-                  href="#services"
+                  href="/services"
                   className="w-fit text-sm text-white/65 transition-colors hover:text-brass"
                 >
                   {service.title}
@@ -171,7 +171,7 @@ function Footer() {
               })}
             </div>
             <a
-              href="#home"
+              href="/"
               className="mt-8 inline-flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.18em] text-white"
             >
               Back to top

@@ -98,7 +98,7 @@ function Services() {
                     {service.description}
                   </p>
                   <a
-                    href="#contact"
+                    href="/contact"
                     className="mt-6 inline-flex items-center gap-2 text-[9px] font-bold uppercase tracking-[0.18em] text-ink opacity-60 transition-all duration-300 group-hover:opacity-100 md:opacity-0"
                   >
                     Enquire <ArrowUpRight size={13} />

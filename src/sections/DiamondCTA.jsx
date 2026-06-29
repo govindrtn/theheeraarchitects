@@ -36,7 +36,7 @@ function DiamondCTA() {
               interior design solutions.
             </p>
             <a
-              href="#contact"
+              href="/contact"
               className="group mt-9 inline-flex items-center gap-3 bg-paper px-7 py-4 text-[10px] font-bold uppercase tracking-[0.18em] text-ink transition-colors hover:bg-brass hover:text-white"
             >
               Start Your Project

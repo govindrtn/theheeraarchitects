@@ -64,7 +64,7 @@ function Hero() {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <a
-              href="#projects"
+              href="/projects"
               className="group inline-flex items-center justify-center gap-3 bg-ink px-7 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-brass"
             >
               View Projects
@@ -74,7 +74,7 @@ function Hero() {
               />
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center border border-ink/25 px-7 py-4 text-xs font-bold uppercase tracking-[0.16em] text-ink transition-colors hover:border-ink hover:bg-white/60"
             >
               Contact Us
@@ -88,7 +88,7 @@ function Hero() {
       </div>
 
       <motion.a
-        href="#about"
+        href="/about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}

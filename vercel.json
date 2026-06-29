@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/((?!assets/|images/|logo.png|diamond-logo.png|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
