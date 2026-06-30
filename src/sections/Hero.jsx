@@ -21,7 +21,7 @@ function Hero() {
       <div className="absolute bottom-0 right-[10%] top-0 hidden w-px bg-black/8 lg:block" />
       <div className="absolute left-[52%] top-0 hidden h-full w-px bg-black/8 lg:block" />
 
-      <div className="container-shell relative z-10 grid items-center gap-10 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:py-24">
+      <div className="container-shell relative z-10 grid items-center gap-10 py-20 lg:grid-cols-[1fr_0.98fr] lg:gap-12 lg:py-24">
         <div className="max-w-4xl">
           <motion.p
             variants={entrance}
@@ -82,7 +82,7 @@ function Hero() {
           </motion.div>
         </div>
 
-        <div className="mx-auto mt-4 w-full max-w-[390px] lg:mt-0 lg:max-w-[490px]">
+        <div className="mx-auto mt-4 w-full max-w-[430px] lg:mt-0 lg:max-w-[560px]">
           <ArchitecturalLogoScene />
         </div>
       </div>
