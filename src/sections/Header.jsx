@@ -23,20 +23,49 @@ const mobileLinks = [
 
 function Header({ currentPath = "/", darkMode, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileHeaderHidden, setMobileHeaderHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 18);
+    let lastScrollY = window.scrollY;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+      setScrolled(currentScrollY > 18);
+
+      if (!isMobile) {
+        setMobileHeaderHidden(false);
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY < 70) {
+        setMobileHeaderHidden(false);
+      } else if (currentScrollY > lastScrollY + 6) {
+        setMobileHeaderHidden(true);
+      } else if (currentScrollY < lastScrollY - 6) {
+        setMobileHeaderHidden(false);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileHeaderHidden(false);
+  }, [currentPath]);
 
   return (
     <>
       <header
         className={`theme-header fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled ? "is-scrolled" : ""
-        }`}
+        } ${mobileHeaderHidden ? "is-mobile-hidden" : ""}`}
       >
         <div className="container-shell flex h-[4.35rem] items-center justify-between md:h-28">
           <div
