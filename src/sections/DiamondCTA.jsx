@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import BrandDiamond from "../components/BrandDiamond";
 import Reveal from "../components/Reveal";
 
 function DiamondCTA() {
@@ -9,19 +8,43 @@ function DiamondCTA() {
       <div className="absolute inset-0 bg-charcoal/90" />
       <div className="container-shell relative z-10">
         <div className="relative grid min-h-[440px] place-items-center overflow-hidden border border-white/[0.08] px-5 py-16 text-center md:min-h-[500px]">
-          <motion.div
+          <motion.svg
             aria-hidden="true"
-            className="absolute size-[390px] rotate-45 border border-white/10 md:size-[480px]"
-            animate={{ rotate: [45, 53, 45] }}
-            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            aria-hidden="true"
-            className="absolute size-[270px] rotate-45 border border-brass/20 md:size-[330px]"
-            animate={{ rotate: [45, 36, 45] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <BrandDiamond className="absolute h-72 w-80 opacity-[0.045] md:h-96 md:w-[28rem]" />
+            viewBox="0 0 720 420"
+            className="absolute inset-0 h-full w-full opacity-45"
+          >
+            <motion.path
+              d="M70 330 250 230 430 330 250 430ZM250 230v200M70 330v-84l180-100 180 100v84M130 296l120-66 120 66M130 262l120-66 120 66M130 228l120-66 120 66"
+              fill="none"
+              stroke="#ffffff"
+              strokeOpacity=".24"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.7, ease: "easeInOut" }}
+            />
+            <motion.path
+              d="M486 330h112V178H486Zm28 0V178m28 152V178m28 152V178m-84 38h112m-112 38h112m-112 38h112m-112 38h112"
+              fill="none"
+              stroke="#a7895d"
+              strokeOpacity=".55"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, delay: 0.35, ease: "easeInOut" }}
+            />
+            <motion.line
+              x1="58"
+              x2="652"
+              y1="204"
+              y2="204"
+              stroke="#a7895d"
+              strokeOpacity=".5"
+              strokeDasharray="8 12"
+              animate={{ y1: [174, 342, 174], y2: [174, 342, 174] }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </motion.svg>
 
           <Reveal className="relative z-10 mx-auto max-w-3xl">
             <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-brass">

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import DiamondShape from "../components/DiamondShape";
 import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 import SectionBlueprintAccent from "../components/SectionBlueprintAccent";
@@ -13,13 +12,7 @@ function Services() {
         reverse
         className="-right-16 top-24 hidden h-72 w-72 lg:block"
       />
-      <DiamondShape
-        size={420}
-        speed={45}
-        opacity={0.035}
-        reverse
-        className="absolute -bottom-36 -left-32 text-ink"
-      />
+      <SectionBlueprintAccent className="-bottom-20 -left-24 hidden h-80 w-80 opacity-60 lg:block" />
 
       <div className="container-shell relative z-10">
         <div className="grid gap-6 md:grid-cols-[1fr_0.45fr] md:items-end md:gap-12">

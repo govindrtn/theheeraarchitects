@@ -1,5 +1,4 @@
-import DiamondShape from "../components/DiamondShape";
-import BrandDiamond from "../components/BrandDiamond";
+import BuildingMassingVisual from "../components/BuildingMassingVisual";
 import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 import { benefits } from "../data/siteData";
@@ -11,20 +10,7 @@ function WhyChooseUs() {
 
       <div className="container-shell relative z-10 grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <div className="relative h-[340px] w-full max-w-xl justify-self-center sm:aspect-square sm:h-auto lg:max-w-none">
-          <div className="architectural-grid absolute inset-0 border border-black/8" />
-          <div className="absolute inset-6 border border-black/10 md:inset-10" />
-          <DiamondShape
-            size={360}
-            speed={38}
-            opacity={0.8}
-            className="absolute left-1/2 top-1/2 max-w-[85%] -translate-x-1/2 -translate-y-1/2 text-ink"
-          />
-          <div className="absolute left-1/2 top-1/2 grid size-28 -translate-x-1/2 -translate-y-1/2 place-items-center bg-paper shadow-xl md:size-32">
-            <BrandDiamond
-              title="The Heera Architects"
-              className="h-20 w-24 md:h-24 md:w-28"
-            />
-          </div>
+          <BuildingMassingVisual />
         </div>
 
         <div>

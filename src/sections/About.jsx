@@ -1,5 +1,4 @@
 import { Award, Gem, Layers3, Target } from "lucide-react";
-import DiamondShape from "../components/DiamondShape";
 import Reveal from "../components/Reveal";
 import SectionHeading from "../components/SectionHeading";
 import SectionBlueprintAccent from "../components/SectionBlueprintAccent";
@@ -15,11 +14,9 @@ function About() {
   return (
     <section id="about" className="section-space relative overflow-hidden bg-paper">
       <SectionBlueprintAccent className="-left-20 bottom-16 hidden h-64 w-64 lg:block" />
-      <DiamondShape
-        size={260}
-        speed={35}
-        opacity={0.04}
-        className="absolute -right-24 top-12 text-ink"
+      <SectionBlueprintAccent
+        reverse
+        className="-right-24 top-12 hidden h-72 w-72 opacity-70 lg:block"
       />
 
       <div className="container-shell">
